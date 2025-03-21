@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="fr">
+    {% include "header.html"  with mon_titre='Connexion' %}
+    <body class="d-flex flex-column justify-content-center">
+        <main class="flex-shrink-0">
+            
+            <!-- Page content-->
+            <section class="py-5">
+                <div class="container px-2">
+                    <div class="text-center" id="spin">
+                        <div class="spinner-border text-muted" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                    </div>
+                    <!-- Contact form-->
+                    <div class=" rounded-4 py-5 px-2 px-md-5">
+                        <div class="text-center mb-2">
+                            <p class="lead text-muted">BelAvenir</p>
+                            <h3 class="text-muted">Accès à l'administration sécurisé</h3>
+                        </div>
+                        <div class="row gx-5 justify-content-center">
+                            
+                            <div class="col-lg-8 col-xl-5">
+                                <form method="post" class="user" id="loginForm">
+                                    {% csrf_token %}
+                                    {% if error %}
+                                        <p class="text-danger text-center">{{ error }}</p>
+                                    {% endif %}
+                                    <div class="form-group  mb-3">
+                                        {{ form.username }}
+                                    </div>
+    
+                                    <div class="form-group  mb-3">
+                                        {{ form.password }}
+                                    </div>
+    
+                                    <div class="d-grid">
+                                        <input type="submit" class="btn btn-primary btn-lg" id="submitButton" value="Se connecter">
+                                    </div>
+                                    <br>
+                                    <div class="d-grid">
+                                        <a class="text-center" href="{% url 'accueil' %}">retour à l'accueil</a>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                document.getElementById("id_username").placeholder = "Nom d'utilisateur";
+                document.getElementById("id_password").placeholder = "Mot de passe";
+            });
+
+            document.getElementById("id_username").classList.add("form-control")
+            document.getElementById("id_password").classList.add("form-control")
+            document.getElementById("id_username").classList.add("form-control-user")
+            document.getElementById("id_password").classList.add("form-control-user")
+
+            document.getElementById("spin").style.display = "none";
+
+            document.getElementById("loginForm").addEventListener("submit", function(event) {
+                // Afficher le spinner
+                document.getElementById("spin").style.display = "block";
+                // Désactiver le bouton pour éviter une double soumission
+                document.getElementById("submitButton").disabled = true;
+            });
+            
+        </script>
+
+    </body>
+</html>

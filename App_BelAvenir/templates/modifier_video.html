@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="fr">
+{% include "header.html" with mon_titre='Modification de video' %}
+<body class="d-flex flex-column justify-content-center"> 
+    <main class="flex-shrink-0">
+        <section class="py-5">
+            <div class="container px-2">
+                <div class=" rounded-4 py-5 px-2 px-md-5">
+                    <form method="post" class="user" id="loginForm" enctype="multipart/form-data">
+                        <h1 class="text-muted text-center">Modivifaction de la vidéo N°{{vid_id.id}}</h1>
+                        <hr>
+                        {% csrf_token %}
+                        {% if messages %}
+                            {% for message in messages %}
+                                <div style="border-radius: 5px;" class=" bg-ligth ">
+                                    <p style="padding: 10px;">
+                                        <span class="text">{{ message }}</span>
+                                    </p>
+                                </div>
+                            {% endfor %}
+                        {% endif %}
+                        <div class="form-group  mb-3">
+                            <label>Selectionner un rapport</label>
+                            {{ form.rapport }}
+                        </div>
+                        <div class="form-group  mb-3">
+                            <label>Choisir une vidéo</label>
+                            {{ form.video }}
+                            <img src="{{ vid_id.video.url }}" alt="modificaion de la vidéo" style="white-space-collapse: 200px; height: 130px;">
+                        </div>
+                        <div class="form-group  mb-3">
+                            <label>Description sur l'image</label>
+                            {{ form.description }}
+                        </div>
+                        <div class="input_flex">
+                            <button class="btn btn-primary" type="submit">Enregistrer le Rapport</button>
+                            <a class="btn btn-primary text-decoration-none" href="{% url 'administration' user.username %}">Retour</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+    
+</body>
+</html>

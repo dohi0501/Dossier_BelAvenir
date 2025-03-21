@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="fr">
+    {% include "header.html" with mon_titre='Généralité sur le VIH' %}
+    <body class="d-flex flex-column h-100">
+        <main class="flex-shrink-0">
+            <!-- Navigation-->
+            {% include "navbar.html" %}
+            <section class="bg-light py-3">
+                <div class="container py-3">
+                    <div class="container-fluid py-5">
+                        <h1 class="display-5 fw-bold mouvement1">Généralité sur le VIH</h1>
+                        <p class="col-md-8 fs-4 mouvement2">
+                            1- Qu'est-ce que le VIH ? Comment se transmet-il ? <br> 
+                            2- Quel est le cycle de vie du VIH ? <br>
+                            3- Comment le corps réagit-il face à l'infection du VIH ? <br>
+                            4- Qu'arrive-t-il au corps après l'infection à VIH ?
+                        </p>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <!-- Blog entries-->
+                        <div class="col-lg-8" >
+                            <!-- Featured blog post-->
+                            <div class="card mb-4" style="top: 1rem;">
+                                <a href="#!"><img class="card-img-top" src="{% static 'assets/img.jpeg' %}" alt="..." /></a>
+                                <div class="card-body">
+                                    <h2 class="card-title" data-aos="fade-up" data-aos-delay="100">VIH : Définition</h2>
+                                    <p class="card-text justifier" data-aos="fade-up" data-aos-delay="100">
+                                        Le VIH (Virus de l'Immunodéficience Humaine) est un virus qui attaque le système immunitaire, en particulier les cellules CD4 (un type de globules blancs), affaiblissant ainsi la capacité du corps à combattre les infections et certaines maladies. Si le VIH n'est pas traité, il peut évoluer vers le SIDA (Syndrome de l'Immunodéficience Acquise), une forme avancée d'infection par le VIH, où le système immunitaire est gravement endommagé, rendant la personne vulnérable à des infections opportunistes et certains cancers.
+                                    </p>
+                                    <br>
+                                    <h2 class="card-title" data-aos="fade-up" data-aos-delay="100">Modes de transmission du VIH</h2>
+                                    <p class="card-text justifier" data-aos="fade-up" data-aos-delay="100">
+                                        Le VIH se transmet principalement par le contact avec des fluides corporels infectés. Voici les modes de transmission principaux : <br><br>
+
+                                        1. Transmission sexuelle : <br> 
+                                        Le VIH se transmet lors de rapports sexuels non protégés (vaginaux, anaux ou oraux) avec une personne infectée, par le biais de fluides corporels comme le sperme, les sécrétions vaginales ou le sang. <br><br>
+
+                                        2. Transmission sanguine : <br> 
+                                        Le VIH peut se transmettre par le partage de seringues ou d'aiguilles, par exemple lors de l'usage de drogues injectables. Il peut également être transmis lors de transfusions de sang non testé ou via des instruments de tatouage ou de piercing non stérilisés. <br><br>
+
+                                        3. Transmission de la mère à l'enfant : <br>
+                                        Une femme enceinte infectée par le VIH peut transmettre le virus à son enfant pendant la grossesse, lors de l'accouchement, ou par l'allaitement. <br><br>
+
+                                        4. Transmission par exposition professionnelle :  <br>
+                                        Les travailleurs de la santé peuvent être exposés au VIH par des blessures accidentelles avec des aiguilles ou des instruments contaminés. <br>
+                                    </p>
+                                    <br>
+                                    <div>
+                                        <video controls width="100%">
+                                            <source src="{% static 'vid/Transmission_du_VIH.mp4' %}" type="video/mp4" />
+                                        </video>
+                                    </div>
+                                    <br>
+                                    <h2 class="card-title" data-aos="fade-up" data-aos-delay="100">Mode de prévention du VIH</h2>
+                                    <p class="card-text justifier" data-aos="fade-up" data-aos-delay="100">
+                                        Il existe plusieurs méthodes pour prévenir l'infection par le VIH : <br><br>
+
+                                        1. Utilisation de préservatifs :  <br>
+                                        Le préservatif masculin ou féminin est l'une des méthodes les plus efficaces pour prévenir la transmission du VIH lors des rapports sexuels. Il empêche le contact direct avec les fluides corporels infectés. <br><br>
+
+                                        2. Traitement préexposition (PrEP) :  <br>
+                                        La PrEP est un traitement préventif prescrit aux personnes à risque élevé de contracter le VIH. Lorsqu'il est pris correctement, il peut réduire de manière significative le risque d'infection. <br><br>
+
+                                        3. Traitement postexposition (PEP) : <br>
+                                        - La PEP est un traitement d'urgence qui peut être administré dans les 72 heures suivant une exposition potentielle au VIH (par exemple, après un rapport sexuel non protégé avec une personne séropositive). Ce traitement peut réduire le risque de contracter le VIH si pris à temps. <br><br>
+
+                                        4. Dépistage et traitement des IST : <br>
+                                        - Le dépistage régulier des infections sexuellement transmissibles (IST) et leur traitement peuvent réduire le risque de transmission du VIH, car les IST augmentent la probabilité de transmission du VIH. <br><br>
+
+                                        5. Circoncision masculine : <br>
+                                        - La circoncision a montré qu'elle pouvait réduire le risque de transmission du VIH lors de rapports sexuels hétérosexuels, bien qu'elle ne fournisse pas une protection totale. <br><br>
+                                    </p>
+                                    <div>
+                                        <video controls width="100%">
+                                            <source src="{% static 'vid/preventions.mp4' %}" type="video/mp4" />
+                                        </video>
+                                    </div>
+                                    <br>
+                                    <a class="btn btn-primary" href="{% url 'cycle_vih' %}">Suivant →</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Side widgets-->
+                        <div class="col-lg-4">
+                            <div class="position-sticky" style="top: 3.7rem;">
+                                <!-- Side widget-->
+                                <div class="card mb-4">
+                                    <div class="card-header">Cycle de vie du VIH</div>
+                                    <div class="card-body">Le VIH est incapable de se répliquer tout seul. Il doit pénétrer à l’intérieur d’une cellule pour faire des copies de lui-même...</div>
+                                    <a class="btn btn-primary" href="{% url 'cycle_vih' %}">Voir →</a>
+                                </div>
+                                <div class="card mb-4">
+                                    <div class="card-header">Comment le corps réagit-il face à l'infection du VIH ?</div>
+                                    <div class="card-body">Au fur et à mesure que le corps fabrique plus de cellules CD4 pour se défendre, le VIH y pénètre et les infecte...</div>
+                                    <a class="btn btn-primary" href="{% url 'reacton_corps_vih' %}">Voir →</a>
+                                </div>
+                                <div class="card mb-4">
+                                    <div class="card-header">Qu'arrive-t-il au corps après l'infection à VIH ?</div>
+                                    <div class="card-body">You can put anything you want inside of these side widgets. They are easy to use, and feature the Bootstrap 5 card component!</div>
+                                    <a class="btn btn-primary" href="{% url 'apres_infection_vih' %}">Voir →</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+        </main>        
+        <!-- Footer-->
+        {% include "footer.html" %}
+
+    </body>
+</html>
+
+
+
+
+

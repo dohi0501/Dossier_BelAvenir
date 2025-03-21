@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="fr">
+    {% include "header.html" with mon_titre='Accueil' %}
+    <body class="d-flex flex-column h-100">
+        <main class="flex-shrink-0">
+            <!-- Navigation-->
+            <header class="header_slide" style="display: flex; height: 100vh; flex-direction: column;">
+                {% include "navbar.html" %}
+                <div class="container pb-5">
+                    <div class="row gx- align-items-center">
+                        <div class="col-xxl-4 mb-5">
+                            <!-- Header text content-->
+                            <div class="text-center text-xxl-start mb-4 py-5 slideur_content">
+                                <div class="fs-2 fw-light text-muted mb-4 mouvement1">le VIH détruit des vies innocentes</div>
+                                <div class="defilement slideur">
+                                    <h1 class="display-3 fw-bolder mouvement4"><span class="text-gradient d-inline">Luttons ensemble pour éliminer le VIH d'ici 2030</span></h1>
+                                    <h1 class="display-3 fw-bolder"><span class="text-gradient d-inline">Luttons ensemble pour éliminer le VIH d'ici 2030</span></h1>
+                                    <h1 class="display-3 fw-bolder"><span class="text-gradient d-inline">Luttons Luttons Luttons Luttons ensemble pour éliminer le VIH d'ici 2030</span></h1>
+                                    <h1 class="display-3 fw-bolder"><span class="text-gradient d-inline">Luttons ensemble pour éliminer le VIH d'ici 2030</span></h1>
+                                    <h1 class="display-3 fw-bolder"><span class="text-gradient d-inline">Luttons  ensemble pour éliminer le VIH d'ici 2030</span></h1>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xxl-start mb-0 mouvement5">
+                            <a class="btn btn-primary btn-lg px-5 py-3 me-sm-3 fs-6 fw-bolder" href="#visite">Visiter</a>
+                            <a class="btn btn-outline-dark btn-lg px-5 py-3 fs-6 fw-bolder" href="{% url 'projets' %}">Projects</a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!-- About Section-->
+            <section class="bg" id="visite">
+                <div class="container col-xxl-8 px-4 py-1">
+                    <div class="row flex-lg-row-reverse align-items-center g-5 py-5" data-aos="fade-up" data-aos-delay="200">
+                        <div class="col-sm-8 col-lg-6">
+                            <img src="{% static 'assets/lutte1.jpg' %}" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" style="max-height: 100%; margin: 0 auto;" loading="lazy">
+                        </div>
+                        <div class="col-lg-6">
+                            <h1 class="display-5 fw-bold lh-1 mb-3">Généralité sur le VIH.</h1>
+                            <p class="lead">Le VIH (Virus de l'Immunodéficience Humaine) est un virus qui attaque le système immunitaire, en particulier les cellules CD4 (un type de globules blancs), affaiblissant ainsi la capacité du corps à combattre les infections et certaines maladies...</p>
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                                <a href="{% url 'generalite_vih' %}" class="btn btn-outline-primary btn-lg px-4">lire la suite</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container col-xxl-8 px-4 py-1">
+                    <div class="row flex-lg-row-reverse align-items-center g-5 py-5" data-aos="fade-up" data-aos-delay="300">
+                        <div class="col-sm-8 col-lg-6">
+                            <img src="{% static 'assets/lutte2.png' %}" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" style="max-height: 100%; margin: 0 auto" loading="lazy">
+                        </div>
+                        <div class="col-lg-6">
+                            <h1 class="display-5 fw-bold lh-1 mb-3">Généralité sur les IST.</h1>
+                            <p class="lead">Les Infections Sexuellement Transmissibles (IST) sont des infections qui se transmettent par contact sexuel. Elles sont causées par des agents pathogènes tels que des virus, des bactéries ou des parasites...</p>
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                                <a href="{% url 'generalite_ist' %}" class="btn btn-outline-primary btn-lg px-4">lire la suite</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container col-xxl-8 px-4 py-1">
+                    <div class="row flex-lg-row-reverse align-items-center g-5 py-5" data-aos="fade-up" data-aos-delay="300">
+                        <div class="col-sm-8 col-lg-6 align-items-center">
+                            <img src="{% static 'assets/3.jpg' %}" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" style="max-height: 100%; margin: 0 auto" loading="lazy">
+                        </div>
+                        <div class="col-lg-6">
+                            <h1 class="display-5 fw-bold lh-1 mb-3">Qu'est-ce que le Dépistage ?</h1>
+                            <p class="lead">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                                <button type="button" href="" class="btn btn-outline-primary btn-lg px-4">lire la suite</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container col-xxl-8 px-4 py-1">
+                    <div class="row flex-lg-row-reverse align-items-center g-5 py-5" data-aos="fade-up" data-aos-delay="300">
+                        <div class="col-sm-8 col-lg-6">
+                            <img src="{% static 'assets/4.jpg' %}" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" style="max-height: 100%; margin: 0 auto" loading="lazy">
+                        </div>
+                        <div class="col-lg-6">
+                            <h1 class="display-5 fw-bold lh-1 mb-3">Qu'est-ce que la charge virale</h1>
+                            <p class="lead">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                                <button type="button" href="" class="btn btn-outline-primary btn-lg px-4">lire la suite</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="apropos" class="bg-light py-5">
+                <main class="container">
+                    <h2 class="card-title">Qui sommes nous ?</h2>
+                    <hr>
+                    <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
+                        <div class="col-md-10 px-0">
+                            <h2 class="display-4 fst-italic"><span class="text-gradient d-inline">A propos de nous.</span></h2>
+                            <p class="lead fw-light text-muted mb-4">Nous sommes Le Réseau Ivoirien du Tourisme et de l’Agro Ecotourisme (RETACI) est le réseau de passionnés professionnels de l’écotourisme en Côte d’Ivoire.</p>
+                            <p>
+                                Il est créé le 28 Janvier 2011 par des spécialistes du tourisme vert pour promouvoir la destination Côte d’Ivoire. 
+                                Enregistré au Ministère de l’Intérieur sous le récépissé de Déclaration d’Association NUMERO 474/ME/MI/DGAT/SDVA du 12 juillet 2012, le RETACI a pour objectif de :
+                                <ul>
+                                    <li>Promouvoir la destination Côte d’Ivoire par le tourisme durable ;</li>
+                                    <li>Concevoir et promouvoir les activités écotouristiques au plan nationales ;</li>
+                                    <li>Assurer l’accueil et l’information des visiteurs ;</li>
+                                    <li>Susciter l’organisation des loisirs et toute manifestation susceptible de mettre en valeur les richesses touristiques et écotouristiques au plan nationale ;</li>
+                                    <li>Faire aux autorités compétentes en matière de tourisme ou toute autre administration, toute proposition susceptible d’améliorer le produit touristique national;</li>
+                                    <li>Promouvoir un tourisme éducatif en milieu scolaire et universitaire.</li>
+                                </ul>
+                            </p>
+                            <p class="lead mb-0"><a href="{% url 'apropos' %}" class="text-white fw-bold">Voir plus d'infos...</a></p>
+                        </div>
+                        <div class="d-flex justify-content-center fs-2 gap-4">
+                            <a class="text-gradient" href="#!"><i class="bi bi-facebook"></i></a>
+                            <a class="text-gradient" href="#!"><i class="bi bi-whatsapp"></i></a>
+                            <a class="text-gradient" href="#!"><i class="bi bi-youtube"></i></a>
+                        </div>
+                    </div>
+                </main>
+            </section>
+            
+            <section id="actualites" class="bg-light py-5">
+                <div class="container marketing">
+                    <h2 class="card-title" style="padding-top: 45px;">L'Actualité sur les rapports de formation</h2>
+                    <hr class="featurette-divider">
+                    {% if rapport %}
+                        <!-- START THE FEATURETTES -->
+                        {% for rap in rapport %}
+                            {% if forloop.counter|divisibleby:2 %}
+                                <div class="row featurette mb-5" data-aos="fade-up" data-aos-delay="200">
+                                    <div class="col-md-7">
+                                        <span class="mb-3">Poster le {{rap.save_date}} Par<span class="text-muted"> {{rap.save_by}}.</span></span>
+                                        <h2 class="featurette-heading"><span class="text-muted">{{rap.titre}}</span></h2>
+                                        <p class="lead py-3">{{rap.description}}...</p>
+                                        <p>Date et lieu de la formation : Du {{rap.date_debut}} au {{rap.date_fin}} à {{rap.lieu}}</p>
+                                        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                                            <a href="{% url 'generalite_vih' %}" class="btn btn-outline-primary btn-lg px-4">lire la suite</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <img src="{{ rap.img_formation.url }}" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" style="width: 500px; height: 400px;" alt="image de la formation">
+                                    </div>
+                                </div>
+                                <hr class="featurette-divider mb-3">
+                            {% else %}
+                                <div class="row featurette">
+                                    <div class="col-md-7 order-md-2">
+                                        <span class="mb-3">Poster le {{rap.save_date}} Par<span class="text-muted"> {{rap.save_by}}.</span></span>
+                                        <h2 class="featurette-heading"><span class="text-muted">{{rap.titre}}</span></h2>
+                                        <p class="lead">{{rap.description}}...</p>
+                                        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                                            <a href="{% url 'generalite_vih' %}" class="btn btn-outline-primary btn-lg px-4">lire la suite</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-5 order-md-1">
+                                        <img src="{{ rap.img_formation.url }}" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" style="width: 500px; height: 400px;" alt="image de la formation">
+                                    </div>
+                                </div>
+                                <hr class="featurette-divider mb-3">
+                            {% endif %}
+                        {% endfor %}
+                    {% else %}
+                        <h5 class="featurette-heading text-center text-muted py-5"><span class="link-danger">Aucun enregistrement Disponible !</span></h5>
+                    {% endif %}
+                </div>
+            </section>
+        </main>
+
+
+        <!-- Footer-->
+        {% include "footer.html" %}
+
+    </body>
+</html>

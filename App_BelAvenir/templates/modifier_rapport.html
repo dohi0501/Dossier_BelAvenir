@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="fr">
+{% include "header.html" with mon_titre='Modification de rapport' %}
+<body class="d-flex flex-column justify-content-center"> 
+    <main class="flex-shrink-0">
+        <section class="py-5">
+            <div class="container px-2">
+                <div class=" rounded-4 py-5 px-2 px-md-5">
+                    <br><br>
+                    <h1 class="text-muted text-center">Modificaion du rapport N°{{rap.id}}</h1>
+                    <hr>
+                    <form method="post" class="user" id="loginForm" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <div class="input_flex">
+                            <div class="form-group1  mb-3">
+                                <label for="">Date de debut</label>
+                                {{ form.date_debut }}
+                            </div>
+                            <div class="form-group1  mb-3">
+                                <label for="">Date de fin</label>
+                                {{ form.date_fin }}
+                            </div>
+                        </div>
+                        <div class="input_flex">
+                            <div class="form-group1  mb-3">
+                                <label for="">Lieu</label>
+                                {{ form.lieu }}
+                            </div>
+                            <div class="form-group1  mb-3">
+                                <label for="">Titre</label>
+                                {{ form.titre }}
+                            </div>
+                        </div>
+                        <div class="form-group  mb-3">
+                            <label for="">Description</label>
+                            {{ form.description }}
+                        </div>
+                        <div class="form-group  mb-3">
+                            <label for="">Document recapitulatif</label>²
+                            {{ form.pdf_recapitulatif }}
+                        </div>
+                        <div class="input_flex">
+                            <button class="btn btn-primary" type="submit">Enregistrer le Rapport</button>
+                            <a class="btn btn-primary text-decoration-none" href="{% url 'administration' user.username %}">Retour</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+    
+</body>
+</html>

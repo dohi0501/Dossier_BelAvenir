@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="fr">
+{% include "header.html" with mon_titre='Ajout de rapport' %}
+<body class="d-flex flex-column justify-content-center"> 
+    <main class="flex-shrink-0">
+        <section class="py-5">
+            <div class="container px-2">
+                <div class=" rounded-4 py-5 px-2 px-md-5">
+                    <h4 class="text-muted text-center">Enregistrer un nouveau rapport de formation</h4>
+                    <hr>
+                    <form method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        {% if error %}
+                            <div class="error mb-4" style="border-radius: 5px; padding: 7px; background-color:rgb(240, 79, 79);">
+                                {{ error }}
+                            </div>
+                        {% endif %}
+                        {% if messages %}
+                            {% for message in messages %}
+                                <div class="error">{{ message }}</div>
+                            {% endfor %}
+                        {% endif %}
+                        <div class="input_flex">
+                            <div class="form-group1  mb-3">
+                                <label for="">Date de debut</label>
+                                {{ form.date_debut }}
+                            </div>
+                            <div class="form-group1  mb-3">
+                                <label for="">Date de fin</label>
+                                {{ form.date_fin }}
+                            </div>
+                        </div>
+                        <div class="input_flex">
+                            <div class="form-group1  mb-3">
+                                <label for="">Lieu</label>
+                                {{ form.lieu }}
+                                {% if form.lieu.errors %}
+                                    {% for error in form.lieu.errors %}
+                                        <div class="link-danger">{{ error }}</div>
+                                    {% endfor %}
+                                {% endif %}
+                            </div>
+                            <div class="form-group1  mb-3">
+                                <label for="">Titre</label>
+                                {{ form.titre }}
+                                {% if form.titre.errors %}
+                                    {% for error in form.titre.errors %}
+                                        <div class="link-danger">{{ error }}</div>
+                                    {% endfor %}
+                                {% endif %}
+                            </div>
+                        </div>
+                        <div class="form-group  mb-3">
+                            <label for="">Description</label>
+                            {{ form.description }}
+                            {% if form.description.errors %}
+                                {% for error in form.description.errors %}
+                                    <div class="link-danger">{{ error }}</div>
+                                {% endfor %}
+                            {% endif %}
+                        </div>
+                        <div class="input_flex">
+                            <div class="form-group1  mb-3">
+                                <label for="">Document recapitulatif</label>
+                                {{ form.pdf_recapitulatif }}
+                                {% if form.pdf_recapitulatif.errors %}
+                                    {% for error in form.pdf_recapitulatif.errors %}
+                                        <div class="link-danger">{{ error }}</div>
+                                    {% endfor %}
+                                {% endif %}
+                            </div>
+                            <div class="form-group1  mb-3">
+                                <label for="">Image de la Formation</label>
+                                {{ form.img_formation }}
+                                {% if form.img_formation.errors %}
+                                    {% for error in form.img_formation.errors %}
+                                        <div class="link-danger">{{ error }}</div>
+                                    {% endfor %}
+                                {% endif %}
+                            </div>
+                        </div>
+                        <div class="input_flex">
+                            <button class="btn btn-primary" type="submit">Enregistrer le Rapport</button>
+                            <a class="btn btn-primary text-decoration-none" href="{% url 'administration' user.username %}">Retour</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+    
+</body>
+</html>

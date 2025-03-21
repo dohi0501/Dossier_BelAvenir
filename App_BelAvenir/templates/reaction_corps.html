@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="fr">
+    {% include "header.html" with mon_titre='Réaction du corps' %}
+    <body class="d-flex flex-column h-100">
+        <main class="flex-shrink-0">
+            <!-- Navigation-->
+            {% include "navbar.html" %}
+            <section class="bg-light py-3">
+                <div class="container py-5">
+                    <h2 class="display-5 fw-bold mouvement1">Comment le corps réagit-il face à l'infection du VIH ?</h2>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <!-- Blog entries-->
+                        <div class="col-lg-8">
+                            <!-- Featured blog post-->
+                            <div class="card mb-4" style="top: 1rem;">
+                                <a href="#!"><img class="card-img-top" src="{% static 'assets/img.jpeg' %}" alt="image du cycle de vie du VIH" /></a>
+                                <div class="card-body">
+                                    <h2 class="card-title" data-aos="fade-up" data-aos-delay="100">Comment le corps réagit-il à l’infection à VIH ?</h2>
+                                    <p class="card-text" data-aos="fade-up" data-aos-delay="100">Au fur et à mesure que le corps fabrique plus de cellules CD4 pour se défendre, le VIH y pénètre et les infecte</p>
+                                    <p class="card-text" data-aos="fade-up" data-aos-delay="100">Votre corps fabrique plus de cellules CD4 pour combattre le VIH, mais le VIH les utilise pour se reproduire encore plus vite. (Chaque cellule CD4 infectée par le VIH peut produire environ 300 nouveaux virus VIH ; ces nouveaux virus pénètrent dans le sang et infectent davantage de cellules CD</p>
+                                    <p class="card-text" data-aos="fade-up" data-aos-delay="100">Les cellules CD4 combattent le VIH, mais elles ne peuvent pas s’en débarrasser.</p>
+                                    <br><br>
+                                    <a class="btn btn-primary" href="{% url 'apres_infection_vih' %}">Read more →</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Side widgets-->
+                        <div class="col-lg-4">
+                            <!-- Side widget-->
+                            <div class="position-sticky" style="top: 3.7rem;">
+                                <div class="card mb-4">
+                                    <div class="card-header">Généralité sur le VIH</div>
+                                    <div class="card-body">Le VIH (Virus de l'Immunodéficience Humaine) est un virus qui attaque le système immunitaire, en particulier les cellules CD4 (un type de globules blancs), affaiblissant ainsi la capacité du corps à combattre...</div>
+                                    <a class="btn btn-primary" href="{% url 'generalite_vih' %}">Voir →</a>
+                                </div>
+                                <div class="card mb-4">
+                                    <div class="card-header">Cycle de vie du VIH</div>
+                                    <div class="card-body">Le VIH est incapable de se répliquer tout seul. Il doit pénétrer à l’intérieur d’une cellule pour faire des copies de lui-même...</div>
+                                    <a class="btn btn-primary" href="{% url 'cycle_vih' %}">Voir →</a>
+                                </div>
+                                <div class="card mb-4">
+                                    <div class="card-header">Qu'arrive-t-il au corps après l'infection à VIH ?</div>
+                                    <div class="card-body">You can put anything you want inside of these side widgets. They are easy to use, and feature the Bootstrap 5 card component!</div>
+                                    <a class="btn btn-primary" href="{% url 'apres_infection_vih' %}">Voir →</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+        </main>
+        <!-- Footer-->
+        {% include "footer.html" %}
+
+    </body>
+</html>
+
+
+
+
+

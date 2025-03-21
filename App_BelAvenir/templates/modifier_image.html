@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="fr">
+{% include "header.html" with mon_titre='Modification d\'image' %}
+<body class="d-flex flex-column justify-content-center"> 
+    <main class="flex-shrink-0">
+        <section class="py-5">
+            <div class="container px-2">
+                <div class=" rounded-4 py-5 px-2 px-md-5">
+                    <form method="post" class="user" id="loginForm" enctype="multipart/form-data">
+                        <h1 class="text-muted text-center">Modification de l'image N° {{img.id}}</h1>
+                        <hr>
+                        {% csrf_token %}
+                        <div class="form-group  mb-3">
+                            <label>Selectionner un rapport</label>
+                            {{ form.rapport }}
+                        </div>
+                        <div class="form-group  mb-3">
+                            <label>Choisir une image</label>
+                            {{ form.image }}
+                            <img src="{{ img.image.url }}" alt="modificaion de la vidéo" style="white-space-collapse: 200px; max-height: 130px;">
+                        </div>
+                        <div class="form-group  mb-3">
+                            <label>Description sur l'image</label>
+                            {{ form.description }}
+                        </div>
+                        <div class="input_flex">
+                            <button class="btn btn-primary" type="submit">Enregistrer le Rapport</button>
+                            <a class="btn btn-primary text-decoration-none" href="{% url 'administration' user.username %}">Retour</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+    
+</body>
+</html>
