@@ -39,7 +39,6 @@ INSTALLED_APPS = [
     'App_BelAvenir',
 
 
-    ############# 
     "defender",
 ]
 
@@ -54,14 +53,14 @@ MIDDLEWARE = [
 ]
 
 
-# # # Nombre de tentatives échouées avant de bloquer l'IP
-# # DEFENDER_LOGIN_FAILURE_LIMIT = 5  # Bloque après 5 tentatives échouées
+# Nombre de tentatives échouées avant de bloquer l'IP
+DEFENDER_LOGIN_FAILURE_LIMIT = 5  
 
-# # Temps de "cooldown" avant que l'utilisateur puisse réessayer
-# DEFENDER_COOLOFF_TIME = 300  # Délai de 300 secondes (5 minutes) avant de débloquer l'IP
+# Temps de "cooldown" avant que l'utilisateur puisse réessayer
+DEFENDER_COOLOFF_TIME = 300  
 
-# # (Optionnel) Définir l'URL de redirection après avoir atteint la limite de tentatives
-# DEFENDER_FAILURE_URL = "/accueil/"  # L'utilisateur est redirigé vers cette page après échec
+# (Optionnel) Définir l'URL de redirection après avoir atteint la limite de tentatives
+DEFENDER_FAILURE_URL = "/"  
 
 
 ROOT_URLCONF = 'Projet_BelAvenir.urls'

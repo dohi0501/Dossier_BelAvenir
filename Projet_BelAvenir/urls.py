@@ -7,7 +7,7 @@ from django.conf.urls.static import static
 handler404 = 'App_BelAvenir.views.erreur_404'
 
 urlpatterns = [
-    path('admin/benito2024/', admin.site.urls),
+    path('admin/benito2023/', admin.site.urls),
     path('', include('App_BelAvenir.urls')),
 ]
 
