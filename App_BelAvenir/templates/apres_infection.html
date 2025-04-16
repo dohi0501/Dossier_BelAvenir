@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="fr">
+    {% include "header.html" with mon_titre='Après l\'infection' %}
+    <body class="d-flex flex-column h-100">
+        <main class="flex-shrink-0">
+            <!-- Navigation-->
+            {% include "navbar.html" %}
+            <section class="bg-light py-3">
+                <div class="container py-5">
+                    <div class="p-5 mb-0 bg-light rounded-3">
+                        <h2 class="display-5 fw-bold mouvement1">Qu'arrive-t-il au corps après l'infection à VIH ?</h2>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <!-- Blog entries-->
+                        <div class="col-lg-8">
+                            <!-- Featured blog post-->
+                            <div class="card mb-4" style="top: 1rem;">
+                                <a href="#!"><img class="card-img-top" src="{% static 'assets/cycle_vih.jpg' %}" alt="image du cycle de vie du VIH" /></a>
+                                <div class="card-body">
+                                    <h2 class="card-title">Qu'arrive-t-il au corps après l'infection à VIH ?</h2>
+                                    <p class="card-text justifier">
+                                        L'infection par le VIH (Virus de l'Immunodéficience Humaine) attaque le système immunitaire, en particulier les cellules T CD4+, qui jouent un rôle essentiel dans la défense du corps contre les infections. L'évolution de l'infection peut se diviser en plusieurs étapes :
+                                    </p>
+                                    <h2 class="card-title" data-aos="fade-up" data-aos-delay="100">1. Phase aiguë (période de fenêtre)</h2>
+                                    <p class="card-text" data-aos="fade-up" data-aos-delay="100">
+                                        Dans les premières semaines après l'infection (généralement 2 à 4 semaines), certaines personnes peuvent ressentir des symptômes similaires à ceux d'une grippe, appelés syndrome rétroviral aigu (SRA). Ces symptômes comprennent :
+                                        <ul>
+                                            <li>Fièvre</li>
+                                            <li>Fatigue</li>
+                                            <li>Maux de tête</li>
+                                            <li>Douleurs musculaires et articulaires</li>
+                                            <li>Mal de gorge</li>
+                                            <li>Éruptions cutanées</li>
+                                        </ul>
+                                        
+                                        Pendant cette phase, le virus se multiplie rapidement dans le corps. Cependant, même sans symptômes graves, il commence à détruire les cellules CD4+.
+                                    </p>
+                                    <h2 class="card-title" data-aos="fade-up" data-aos-delay="100">2. Phase de latence clinique (période asymptomatique)</h2>
+                                    <p class="card-text" data-aos="fade-up" data-aos-delay="100">
+                                        Après l'infection initiale, le VIH entre dans une phase plus calme qui peut durer des années, bien que le virus continue de se répliquer dans le corps. Les personnes peuvent ne pas avoir de symptômes pendant cette période, et si elles sont traitées avec des antirétroviraux (ARV), elles peuvent rester en bonne santé. Toutefois, le virus continue de détruire lentement les cellules CD4+. <br>
+                                    </p>
+                                    <h2 class="card-title" data-aos="fade-up" data-aos-delay="100">3. Phase de destruction progressive du système immunitaire</h2>
+                                    <p class="card-text" data-aos="fade-up" data-aos-delay="100">
+                                        Au fur et à mesure que les cellules CD4+ sont détruites, le système immunitaire devient de plus en plus affaibli. Les personnes infectées par le VIH sont plus vulnérables aux infections opportunistes, des infections qui ne touchent généralement pas les personnes ayant un système immunitaire sain. Ces infections peuvent inclure des infections pulmonaires (comme la pneumonie à Pneumocystis jirovecii), des infections fongiques, des infections bactériennes graves, ainsi que certains cancers comme le lymphome et le sarcome de Kaposi. <br>
+                                    </p>
+                                    <h2 class="card-title" data-aos="fade-up" data-aos-delay="100">4. SIDA (Syndrome d'Immunodéficience Acquise)</h2>
+                                    <p class="card-text" data-aos="fade-up" data-aos-delay="100">
+                                        Sans traitement antirétroviral, l'infection par le VIH peut évoluer vers le SIDA. À ce stade :
+                                        <ul>
+                                            <li>Le système immunitaire est gravement affaibli.</li>
+                                            <li>Les personnes peuvent développer des infections opportunistes ou des cancers.</li>
+                                            <li>Les cellules CD4+ sont extrêmement faibles (moins de 200 cellules par millimètre cube de sang, contre 500 à 1600 cellules chez une personne non infectée).</li>
+                                        </ul>
+                                        Les symptômes du SIDA peuvent inclure une perte de poids importante, des sueurs nocturnes, des infections récurrentes, des problèmes neurologiques, et des maladies graves comme la tuberculose ou certaines formes de cancer.<br>
+                                    </p>
+                                    <h2 class="card-title" data-aos="fade-up" data-aos-delay="100">5. Conséquences à long terme</h2>
+                                    <p class="card-text" data-aos="fade-up" data-aos-delay="100">
+                                        Si l'infection par le VIH n'est pas traitée, elle entraîne une détérioration progressive de la santé. Cependant, avec un traitement antirétroviral (TAR) efficace, il est possible de contrôler le virus et d'empêcher l'évolution vers le SIDA. Les personnes vivant avec le VIH peuvent mener une vie relativement normale et vivre longtemps si elles adhèrent au traitement. <br>
+                                    </p>
+                                    <h2 class="card-title" data-aos="fade-up" data-aos-delay="100">Conclusion</h2>
+                                    <p class="card-text" data-aos="fade-up" data-aos-delay="100">
+                                        L'infection par le VIH affaiblit progressivement le système immunitaire en détruisant les cellules CD4+. Si elle n'est pas traitée, cela peut conduire au SIDA, où le corps devient extrêmement vulnérable aux infections graves. Toutefois, avec un traitement approprié, il est possible de contrôler le virus et de maintenir une bonne qualité de vie. <br>
+                                    </p>
+                                    <br>
+                                    <div>
+                                        <video controls min-width="400" width="100%">
+                                            <source src="{% static 'vid/le_corps.mp4' %}" type="video/mp4" />
+                                        </video>
+                                    </div>
+                                    <br>
+                                    <a class="btn btn-primary" href="{% url 'generalite_ist' %}">Les IST →</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Side widgets-->
+                        <div class="col-lg-4">
+                            <!-- Side widget-->
+                            <div class="position-sticky" style="top: 3.7rem;">
+                                <div class="card mb-4">
+                                    <div class="card-header">Généralité sur le VIH</div>
+                                    <div class="card-body">Le VIH (Virus de l'Immunodéficience Humaine) est un virus qui attaque le système immunitaire, en particulier les cellules CD4 (un type de globules blancs), affaiblissant ainsi la capacité du corps à combattre...</div>
+                                    <a class="btn btn-primary" href="{% url 'generalite_vih' %}">Voir →</a>
+                                </div>
+                                <div class="card mb-4">
+                                    <div class="card-header">Cycle de vie du VIH</div>
+                                    <div class="card-body">Le VIH est incapable de se répliquer tout seul. Il doit pénétrer à l’intérieur d’une cellule pour faire des copies de lui-même...</div>
+                                    <a class="btn btn-primary" href="{% url 'cycle_vih' %}">Voir →</a>
+                                </div>
+                                <div class="card mb-4">
+                                    <div class="card-header">Comment le corps réagit-il face à l'infection du VIH ?</div>
+                                    <div class="card-body">Au fur et à mesure que le corps fabrique plus de cellules CD4 pour se défendre, le VIH y pénètre et les infecte...</div>
+                                    <a class="btn btn-primary" href="{% url 'reacton_corps_vih' %}">Voir →</a>
+                                </div>
+                                <div class="card mb-4">
+                                    <div class="card-header">Les IST ?</div>
+                                    <div class="card-body">You can put anything you want inside of these side widgets. They are easy to use, and feature the Bootstrap 5 card component!</div>
+                                    <a class="btn btn-primary" href="{% url 'generalite_ist' %}">Voir →</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+        </main>
+        <!-- Footer-->
+        {% include "footer.html" %}
+
+    </body>
+</html>
+
+
+
+
+

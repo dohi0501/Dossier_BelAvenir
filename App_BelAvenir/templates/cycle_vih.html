@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="fr">
+    {% include "header.html" with mon_titre='Cycle de vie du VIH' %}
+    <body class="d-flex flex-column h-100">
+        <main class="flex-shrink-0">
+            <!-- Navigation-->
+            {% include "navbar.html" %}
+            <section class="bg-light py-3">
+                <div class="container py-5">
+                    <div class="p-5 mb-0 bg-light rounded-3">
+                        <h2 class="display-5 fw-bold mouvement1">Le cycle de vie du VIH</h2>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <!-- Blog entries-->
+                        <div class="col-lg-8">
+                            <!-- Featured blog post-->
+                            <div class="card mb-4" style="top: 1rem;">
+                                <center><img  src="{% static 'assets/cycle.jpg' %}" style="max-height: 450px; max-width: 100%; " alt="image du cycle de vie du VIH" /></center>
+                                <div class="card-body justifier">
+                                    <h2 class="card-title justifier">cycle de vie du VIH</h2>
+                                    <p class="card-text">
+                                        Le VIH est incapable de se répliquer tout seul. Il doit pénétrer à l’intérieur d’une cellule pour faire des copies de lui-même. Lorsque le VIH infecte une cellule, il prend le contrôle de sa « machinerie » et s’en sert pour se reproduire dans le cadre d’un processus appelé réplication virale. Les copies du virus quittent les cellules hôtes et partent à la recherche d’autres cellules à infecter. Selon les estimations des experts, le corps d’une personne séropositive qui n’est pas traitée produirait jusqu’à 10 milliards de copies du VIH par jour.
+                                    </p>
+                                    <p class="card-text justifier">
+                                        Quand on comprend la façon dont le VIH se reproduit (c.-à.-d. le « cycle de vie » viral), on comprend mieux la façon dont fonctionnent les médicaments antirétroviraux. Les illustrations suivantes montrent les étapes distinctes du cycle de vie viral, ainsi que la classe de médicaments qui intervient à chaque étape.
+                                        Le VIH se compose de deux brins de matériel génétique appelé ARN. En plus de celui-ci, le VIH contient les trois enzymes clés suivantes :
+                                        <ul>
+                                            <li>transcriptase inverse</li>
+                                            <li>intégrase</li>
+                                            <li>protéase</li>
+                                        </ul>
+                                        Ces enzymes sont des protéines qui aident le virus à fabriquer des copies de lui-même.
+                                    </p>
+                                    <h2 class="card-title">Étape 1 : Le VIH entre dans la cellule</h2><br>
+                                    <center><img src="{% static 'assets/cycle_etape1.jpg' %}" style="max-height: 350px; max-width: 230px;" alt="" class="card-img-top"></center>
+                                    <br><br>
+                                    <p class="card-text justifier">
+                                        La surface externe du VIH est couverte de protéines. Les cellules humaines ont également à leur surface des protéines appelées récepteurs. Ces derniers ont des millions de formes différentes. On trouve à la surface du VIH des protéines qui rentrent parfaitement dans les récepteurs présents à la surface de certaines cellules, y compris les CD4, comme une clé dans une serrure. Une fois installé dans ces récepteurs, le VIH se fusionne à la cellule. Ensuite, le contenu du virus entre dans la cellule.
+                                    </p>
+                                    <p class="card-text justifier">
+                                        Avant que le VIH puisse infecter une cellule, il doit se lier à deux récepteurs présents à la surface des cellules CD4. Le premier de ces récepteurs est le récepteur CD4. On appelle l’autre un corécepteur. Il existe plusieurs corécepteurs différents, dont le CCR5 et le CXCR4.
+                                    </p>
+                                    <p class="card-text justifier">
+                                        On travaille au développement de nombreux médicaments dans l’espoir d’empêcher le VIH d’entrer dans les cellules. On appelle <strong>inhibiteurs de fusion</strong> les médicaments conçus pour empêcher le VIH de s’attacher au récepteur CD4 et de se fusionner à la surface des cellules. Les médicaments qui bloquent la liaison entre le VIH et les corécepteurs s’appellent <strong>inhibiteurs</strong> ou <strong>antagonistes des corécepteurs</strong>. Ces derniers sont désignés par des noms plus spécifiques en fonction du récepteur qu’ils sont censés bloquer. Par exemple, les <strong>antagonistes du CCR5</strong> bloquent l’interaction entre le VIH et le corécepteur CCR5 des cellules CD4.
+                                    </p>
+                                    <h2 class="card-title">Étape 2 : Le VIH prend le contrôle de la cellule</h2>
+                                    <center><img src="{% static 'assets/cycle_etape2.jpg' %}" style="max-height: 350px; max-width: 230px;" alt="" class="card-img-top"></center>
+                                    <p class="card-text">
+                                        Une fois à l’intérieur de la cellule, le VIH prend le contrôle de la cellule. Une des enzymes du VIH, soit la transcriptase inverse (TI), convertit le matériel génétique (ARN) du virus en une autre sorte de matériel génétique appelé ADN. Une fois cette transformation accomplie, le matériel génétique du virus est identique à celui de la cellule « hôte ».
+                                    </p>
+                                    <p class="card-text">
+                                        Il existe une classe de médicaments appelés inhibiteurs de la transcriptase inverse qui ralentissent ou bloquent l’action de l’enzyme TI. Cette catégorie consiste en deux sous-types :
+                                        <ul>
+                                            <li>nhibiteurs nucléosidiques de la transcriptase inverse (INTI), couramment appelés analogues nucléosidiques</li>
+                                            <li>inhibiteurs non nucléosidiques de la transcriptase inverse (INNTI), couramment appelés analogues non nucléosidiques</li>
+                                        </ul>
+                                    </p>
+                                    <p class="card-text">
+                                        Les analogues nucléosidiques ont été les premiers médicaments approuvés pour le traitement du VIH. Utilisés en paires, ces médicaments demeurent l’élément essentiel (appelée « colonne vertébrale ») de la plupart des combinaisons de médicaments. Pour composer une combinaison efficace, les deux analogues nucléosidiques sont associés à un médicament (ou parfois à plusieurs) d’une autre classe. Il s’agit habituellement d’un analogue non nucléosidique ou d’un inhibiteur de la protéase, ou encore d’un inhibiteur de l’intégrase.
+                                    </p>
+                                    <h2 class="card-title">Étape 3 : Le VIH s’intègre dans la cellule infectée</h2>
+                                    <center><img src="{% static 'assets/cycle_etape3.jpg' %}" style="max-height: 350px; max-width: 230px;" alt="" class="card-img-top"></center>
+                                    <p class="card-text">Durant cette phase du cycle de vie viral, une deuxième enzyme appelée intégrase insère l’ADN viral nouvellement converti dans l’ADN de la cellule hôte. Lorsque l’ADN du virus s’intègre dans l’ADN de la cellule, le virus fait désormais partie de celle-ci. Certains ont comparé ce processus à l’introduction d’un bogue dans un logiciel informatique. On donne le nom d’inhibiteurs de l’intégrase aux médicaments qui empêchent le VIH de s’intégrer dans les cellules humaines.</p>
+                                    <h2 class="card-title">Étape 4 : Le VIH trompe la cellule infectée afin qu’elle fabrique des copies du virus</h2>
+                                    <center><img src="{% static 'assets/cycle_etape4.jpg' %}" style="max-height: 350px; max-width: 230px;" alt="" class="card-img-top"></center>
+                                    <p class="card-text">Toute cellule infectée par le VIH demeure inactive pendant longtemps. Lorsque la cellule CD4 infectée est activée, elle se met à faire des copies du virus et à les libérer dans le sang. Lorsqu’une nouvelle copie du VIH est produite, elle ne consiste d’abord qu’en une seule longue chaîne de protéines virales. L’enzyme protéase agit comme des ciseaux pour couper cette chaîne de protéines en petits morceaux. Ces derniers sont ensuite assemblés de sorte à créer de nouvelles particules virales qui sortent ensuite de la cellule hôte par bourgeonnement. Les nouveaux virus peuvent ensuite infecter d’autres cellules.</p>
+                                    <center><img src="{% static 'assets/dernier_cycle.jpg' %}" style="max-height: 350px; max-width: 230px;" alt="" class="card-img-top"></center>
+                                    <p class="card-text">Les inhibiteurs de la protéase (IP) sont des médicaments qui bloquent l’activité de l’enzyme protéase du VIH. Ils empêchent celle-ci de couper les longues chaînes de protéines virales nouvellement créées. Lorsque les IP sont utilisés, de nouveaux virus peuvent continuer à se former, mais ils sont défectueux et ne peuvent infecter d’autres cellules.</p>
+                                    <h2 class="card-title" data-aos="fade-up" data-aos-delay="100">Conclusion</h2>
+                                    <p class="card-text" data-aos="fade-up" data-aos-delay="100">
+                                        Le VIH est une infection virale qui, si elle n'est pas contrôlée, peut évoluer en SIDA, une maladie grave qui affaiblit le système immunitaire. Cependant, grâce à des mesures de prévention efficaces comme l'utilisation de préservatifs, la PrEP, le dépistage régulier, et l'accès aux traitements antirétroviraux, il est possible de réduire considérablement le risque de transmission du VIH. Il est également important de sensibiliser les populations à risque et de promouvoir des comportements responsables pour lutter contre la propagation du virus. <br>
+                                    </p>
+                                    <br>
+                                    <div>
+                                        <video controls min-width="400" width="100%">
+                                            <source src="{% static 'vid/cycle.mp4' %}" type="video/mp4" />
+                                        </video>
+                                    </div>
+                                    <br>
+                                    <a class="btn btn-primary" href="{% url 'reacton_corps_vih' %}">Read more →</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Side widgets-->
+                        <div class="col-lg-4">
+                            <!-- Side widget-->
+                            <div class="position-sticky" style="top: 3.7rem;">
+                                <div class="card mb-4">
+                                    <div class="card-header">Généralité sur le VIH</div>
+                                    <div class="card-body">Le VIH (Virus de l'Immunodéficience Humaine) est un virus qui attaque le système immunitaire, en particulier les cellules CD4 (un type de globules blancs), affaiblissant ainsi la capacité du corps à combattre...</div>
+                                    <a class="btn btn-primary" href="{% url 'generalite_vih' %}">Voir →</a>
+                                </div>
+                                <div class="card mb-4">
+                                    <div class="card-header">Comment le corps réagit-il face à l'infection du VIH ?</div>
+                                    <div class="card-body">Au fur et à mesure que le corps fabrique plus de cellules CD4 pour se défendre, le VIH y pénètre et les infecte...</div>
+                                    <a class="btn btn-primary" href="{% url 'reacton_corps_vih' %}">Voir →</a>
+                                </div>
+                                <div class="card mb-4">
+                                    <div class="card-header">Qu'arrive-t-il au corps après l'infection à VIH ?</div>
+                                    <div class="card-body">You can put anything you want inside of these side widgets. They are easy to use, and feature the Bootstrap 5 card component!</div>
+                                    <a class="btn btn-primary" href="{% url 'apres_infection_vih' %}">Voir →</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+        </main>
+        <!-- Footer-->
+        {% include "footer.html" %}
+
+    </body>
+</html>
+
+
+
+
+

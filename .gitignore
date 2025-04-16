@@ -1,0 +1,31 @@
+# Fichiers Python
+*.pyc
+__pycache__/
+
+# Fichiers d’environnement
+.env
+*.env
+
+# Dossier de virtualenv
+env/
+virtualisation/
+env/
+
+# Fichiers de base de données
+*.sqlite3
+
+# Dossier de fichiers statiques collectés
+/staticfiles/
+/media/
+
+# Dossiers temporaires ou de logs
+*.log
+*.pot
+*.mo
+
+# VSCode, PyCharm, etc.
+.vscode/
+.idea/
+
+# Fichiers de migration compilés
+*.py[cod]

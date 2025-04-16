@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="fr">
+{% include "header.html" with mon_titre='Ajout d\image' %}
+<body class="d-flex flex-column justify-content-center"> 
+    <main class="flex-shrink-0">
+        <section class="py-5">
+            <div class="container px-2">
+                <div class=" rounded-4 py-5 px-2 px-md-5">
+                    <form method="post" class="user" id="loginForm" enctype="multipart/form-data">
+                        <h1 class="text-muted text-center">Enregistrer des images ici</h1>
+                        <hr>
+                        {% csrf_token %}
+                        {% if messages %}
+                            {% for message in messages %}
+                                <div style="border-radius: 5px; background-color: #A5FFA5;">
+                                    <p style="padding: 8px 10px; font-size: 15px;">
+                                        <span class="text">{{ message }}</span>
+                                    </p>
+                                </div>
+                            {% endfor %}
+                        {% endif %}
+                        {% if error %}
+                            <div class="error mb-4" style="border-radius: 5px; padding: 7px; background-color:rgb(240, 79, 79);">
+                                {{ error }}
+                            </div>
+                        {% endif %}
+                        <div class="input_flex">
+                            <div class="form-group1  mb-3">
+                                <label>Selectionner un rapport</label>
+                                {{ form.rapport }}
+                                {% if form.rapport.errors %}
+                                    {% for error in form.rapport.errors %}
+                                        <div class="link-danger">{{ error }}</div>
+                                    {% endfor %}
+                                {% endif %}
+                            </div>
+                            <div class="form-group1  mb-3">
+                                <label>Choisir une image</label>
+                                {{ form.image }}
+                                {% if form.image.errors %}
+                                    {% for error in form.image.errors %}
+                                        <div class="link-danger">{{ error }}</div>
+                                    {% endfor %}
+                                {% endif %}
+                            </div>
+                        </div>
+                        <div class="form-group  mb-3">
+                            <label>Description sur l'image</label>
+                            {{ form.description }}
+                            {% if form.description.errors %}
+                                {% for error in form.description.errors %}
+                                    <div class="link-danger">{{ error }}</div>
+                                {% endfor %}
+                            {% endif %}
+                        </div>
+                        <div class="input_flex">
+                            <button class="btn btn-primary" type="submit">Enregistrer le Rapport</button>
+                            <a class="btn btn-primary text-decoration-none" href="{% url 'administration' user.username %}">Retour</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+    
+</body>
+</html>

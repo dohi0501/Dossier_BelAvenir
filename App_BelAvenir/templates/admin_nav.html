@@ -1,0 +1,27 @@
+{% load static %}
+
+<div class="naviga">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white py-0">
+        <div class="container px-3">
+            <a class="navbar-brand mouvement4" href="{% url 'administration' user.username %}" ><img style="height: 55px; transform: translateY(-1.5px); margin-right: 7px;" src="{% static 'assets/logo.png' %}" alt=""><span class="fw-bolder text-primary logo_title">BelAvenir</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse mouvement4" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
+                    <li class="nav-item"><a class="nav-link" href="{% url 'administration' user.username %}">Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-bs-toggle="dropdown" aria-expanded="false">Actions</a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdown03">
+                            <li><a class="dropdown-item" href="{% url 'ajout_rapport' user.username %}">ajouter un rapport</a></li>
+                            <li><a class="dropdown-item" href="{% url 'ajout_image' user.username %}">ajouter des images</a></li>
+                            <li><a class="dropdown-item" href="{% url 'ajout_video' user.username %}">ajouter des vidéos</a></li>
+                            <li><a class="dropdown-item" href="{% url 'liste_rapport' user.username %}">liste des rapports</a></li>
+                            <li><a class="dropdown-item" href="{% url 'liste_image' user.username %}">liste des images</a></li>
+                            <li><a class="dropdown-item" href="{% url 'liste_video' user.username %}">liste des vidéos</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link btn btn-info" href="{% url 'logout' %}">Se déconnecter</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
